@@ -4,6 +4,8 @@
 import { useParams } from "react-router";
 import DailyActivity from "../components/DailyActivity";
 import Header from "../components/Header";
+import Performances from "../components/Performances";
+import Sessions from "../components/Sessions";
 import VerticalLayout from "../components/VerticalLayout";
 import mockData from "../MockAPI";
 
@@ -49,6 +51,8 @@ function MockProfil() {
 
         <section className="sportsee-stats-container">
           <DailyActivity activity={ userActivity}/>
+          <Sessions sessions={userSession}/>
+          <Performances performances={userPerformance}/>
         </section>
       </main>
 

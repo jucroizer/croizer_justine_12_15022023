@@ -17,7 +17,7 @@ function DailyActivity(props) {
     const numbers = [1, 2, 3, 4, 5, 6, 7]
     
 
-    console.log("dayInfo", dayInfo)
+    // console.log("dayInfo", dayInfo)
     
     // console.log(props.activity.sessions);
   
