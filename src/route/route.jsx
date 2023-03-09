@@ -7,7 +7,7 @@ function RouteManager(){
     return (
         <Router>
           <Routes>
-            <Route path="/:id" element={<MockProfil />}></Route>
+            <Route path="/ProfilMock/:id" element={<MockProfil />}></Route>
             <Route path="/Profil/:id" element={<Profil />}></Route>
           </Routes>
         </Router>

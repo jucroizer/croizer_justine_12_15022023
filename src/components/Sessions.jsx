@@ -11,25 +11,52 @@ import {
 function Sessions(props) {
   const sessions = props.sessions.sessions;
   const sessionMoy = sessions.map((session) => session.sessionLength);
-//   console.log(sessionMoy);
-  // console.log(props.sessions.map((session) => session.sessionLength))
+ 
+
+  const data = [{
+    day: "L",
+    session: sessionMoy[0]
+  },
+  {
+    day: "M",
+    session: sessionMoy[1]
+  },
+  {
+    day: "M",
+    session: sessionMoy[2]
+  },
+  {
+    day: "J",
+    session: sessionMoy[3]
+  },
+  {
+    day: "V",
+    session: sessionMoy[4]
+  },
+  {
+    day: "S",
+    session: sessionMoy[5]
+  },
+  {
+    day: "D",
+    session: sessionMoy[6]
+  }]
 
   return (
     <LineChart
-      width={258}
-      height={263}
-      data={sessions}
+      width={730}
+      height={250}
+      data={data}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis />
-      <YAxis />
+      <CartesianGrid />
+      <XAxis dataKey="day" tick={false} axisLine={false}/>
+      <YAxis tick={false} axisLine={false}/>
       <Tooltip />
-      <Legend />
+      {/* <Legend className="legend"/> */}
       <Line
         type="monotone"
-        data={sessions.map((session) => session.sessionLength)}
-        dataKey="sessionLength"
+        dataKey="session"
         stroke="#8884d8"
       />
     </LineChart>

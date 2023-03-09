@@ -55,7 +55,7 @@ function Performances(props) {
       <PolarAngleAxis dataKey="name" />
       <PolarRadiusAxis domain={[0, "fullMark"]} tick={false} axisLine={false} />
       <Radar name="false" dataKey="value" fill="#8884d8" fillOpacity={0.6}/>
-      <Legend />
+      {/* <Legend /> */}
     </RadarChart>
   );
 }

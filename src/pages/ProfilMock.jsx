@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import DailyActivity from "../components/DailyActivity";
 import Header from "../components/Header";
 import Performances from "../components/Performances";
+import Score from "../components/Score";
 import Sessions from "../components/Sessions";
 import VerticalLayout from "../components/VerticalLayout";
 import mockData from "../MockAPI";
@@ -20,7 +21,9 @@ function MockProfil() {
     // Utilisation des données keyData pour les affichages en carte (droite)
     const userInfo = mockData.getMockUserInfo(transformId);
     const user = userInfo.userInfos;
-    console.log("user", userInfo)
+
+    const score = userInfo.todayScore;
+    console.log(score)
     
     //Récupération des données de l'activité de l'utilisateur
     // Utilisation de BarChart pour l'affichage de l'activité quotidienne
@@ -30,12 +33,12 @@ function MockProfil() {
     //Récupération des données des sessions de l'utilisateur
     // Utilisation de LineChart pour l'affichage de la durée moyenne des sessions
     const userSession= mockData.getMockUserSession(transformId)
-    console.log("sessions", userSession)
+    // console.log("sessions", userSession)
 
     //Récupération des données de performances de l'utilisateur
     // Utilisation de RadarChart pour l'affichage des specs
     const userPerformance= mockData.getMockUserPerformance(transformId)
-    console.log("performances", userPerformance)
+    // console.log("performances", userPerformance)
 
     //Utilisation de RadialBarChart pour le Score avec todayScore dans les userInfo
  
@@ -53,6 +56,7 @@ function MockProfil() {
           <DailyActivity activity={ userActivity}/>
           <Sessions sessions={userSession}/>
           <Performances performances={userPerformance}/>
+          <Score score={score}/>
         </section>
       </main>
 
