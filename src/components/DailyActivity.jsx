@@ -4,8 +4,7 @@ import {
   XAxis,
   YAxis,
   Bar,
-  Tooltip,
-  ResponsiveContainer,
+  Tooltip
 } from "recharts";
 
 import "../styles/Graph.css";
@@ -54,7 +53,7 @@ function DailyActivity(props) {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip">
+        <div className="custom-tooltip-activity">
           <p className="poids">{`${payload[0].value + "kg"}`}</p>
           <p className="calories">{`${payload[1].value + "Kcal"}`}</p>
         </div>

@@ -23,32 +23,32 @@ function Score(props) {
 
   return (
     <div className="sportsee-score-container"  style={{backgroundColor:"#FBFBFB", borderRadius: "5px"}}>
-      <p className="score">Score</p>
-      <div className="infoScore">
-        <p id="scoreGras">{score}%</p>
-        <p>de votre</p>
-        <p>objectif</p>
+      <p className="sportsee-score-title">Score</p>
+      <div className="sportsee-score-infos">
+        <p className="sportsee-score-p"><span id="scoreGras">{score}%</span> de votre objectif</p>
       </div>
-
       
         <RadialBarChart
           startAngle={220}
           endAngle={-35}
-          width={250}
-          height={100}
-          cx="50%"
-          cy="50%"
-          innerRadius="70%"
-          outerRadius="80%"
-          barSize={25}
+          width={300}
+          height={200}
+          cx="44%"
+          cy="38%"
+          // innerRadius={20}
+          outerRadius={140}
+          barSize={10}
           data={data}
           isAnimationActive={false}
+          style={{marginTop:"-6em", marginLeft:"0em", width:"100%", height:"100%"}}
         >
           <RadialBar
-            minAngle={15}
-            background={false}
+            minAngle={5}
+            background
+            clockWise
             dataKey="todayScore"
-            cornerRadius={5}
+            cornerRadius={15}
+            style={{backgroundColor:"#FFFFFF"}}
           />
         </RadialBarChart>
       

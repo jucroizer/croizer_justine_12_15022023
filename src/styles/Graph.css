@@ -52,9 +52,47 @@
     font-size: 3em;
 }
 
-.custom-tooltip{
+.custom-tooltip-activity{
     background-color: #E60000;
     color: #FFFFFF;
     padding: 0.5em;
     font-size: 0.7em;
+}
+
+
+/* Graphique Score */
+
+.sportsee-score-title{
+    position: relative;
+    color: #20253A;
+    top: 1em;
+    left: 2em;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.sportsee-score-infos{
+    position:relative;
+    top: 3em;
+    left: 4em;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    width: 105px;
+    height: 105px;
+    padding: 1em;
+}
+
+.sportsee-score-p{
+    width: 45%;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: center;
+    margin: 2em auto;
+    color: #74798C;
+}
+
+#scoreGras{
+    font-size: 2em;
+    font-weight: 700;
+    color: #282D30;
 }

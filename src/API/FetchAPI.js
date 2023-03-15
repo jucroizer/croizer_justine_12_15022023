@@ -2,16 +2,18 @@
 
 // // On appelle l'API ici
 
-// function FetchAPI() {
+// // On peut faire une classe aussi
 
-//    const apiGet18 = fetch('http://localhost:3000/user/18')
-// .then((response) => response.json())
-// .then((data) => console.log(data));
+// function FetchAPI(id) {
+
+//    const apiGet = fetch('http://localhost:3000/user/`${id}`')
+//     .then((response) => response.json())
+//     .then((data) => console.log(data));
 
 
-// const apiGet12 = fetch('http://localhost:3000/user/12')
-// .then((response) => response.json())
-// .then((data) => console.log(data));
+// // const apiGet12 = fetch('http://localhost:3000/user/12')
+// // .then((response) => response.json())
+// // .then((data) => console.log(data));
 
 //     return(
 //         <div>
