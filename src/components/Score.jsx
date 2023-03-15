@@ -11,6 +11,7 @@ function Score(props) {
   
   let getScore = props.score
   let score = 0
+  
   //percentage converter
   getScore === 1 ? score = 100 : score = (getScore * 100).toFixed(0)
   const data = [

@@ -1,0 +1,24 @@
+.sportsee-card{
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    width: 258px;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    display: flex;
+}
+
+.sportsee-card-icon{
+    margin: 1em 1em;
+}
+
+.sportsee-card-h3{
+    font-size: 1.4em;
+}
+
+.sportsee-card-p{
+    font-weight: 600;
+    color: #74798C;
+    margin: -1em 0;
+    font-size: 0.9em;
+}
