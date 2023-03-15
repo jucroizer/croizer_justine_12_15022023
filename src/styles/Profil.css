@@ -4,10 +4,24 @@
 
 .sportsee-title{
     font-weight: 500;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #000000;
 }
 
 .sportsee-title-username{
     color: #FF0101;
+}
+
+.sportsee-stats-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.sportsee-graph-container{
+    width: 70%;
+}
+
+.sportsee-stats-trio{
+    display: flex;
 }

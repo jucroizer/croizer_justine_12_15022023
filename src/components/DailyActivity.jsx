@@ -5,9 +5,10 @@ import {
   YAxis,
   Bar,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
+
+import "../styles/Graph.css";
 
 function DailyActivity(props) {
   const sessions = props.activity.sessions;
@@ -50,14 +51,54 @@ function DailyActivity(props) {
     },
   ];
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="poids">{`${payload[0].value + "kg"}`}</p>
+          <p className="calories">{`${payload[1].value + "Kcal"}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   return (
-    <ResponsiveContainer width="100%" height={250}>
-      <BarChart width={750} height={250} data={data} barSize={7}>
+    <div
+      className="sportsee-activity-container"
+      style={{
+        backgroundColor: "#FBFBFB",
+        borderRadius: "5px",
+        marginBottom: "2em",
+      }}
+    >
+      <div className="sportsee-activity-meta">
+        <p className="sportsee-activity-title">Activité quotidienne</p>
+
+        <div  className="sportsee-activity-legend">
+            <li className="sportsee-list-poids"><span>Poids (kg)</span></li>
+            <li className="sportsee-list-calories"><span>Calories brûlées (kCal)</span></li>
+        </div>
+      </div>
+
+      <BarChart
+        width={900}
+        height={170}
+        data={data}
+        barSize={7}
+        style={{ marginLeft: "-1.5em" }}
+      >
         <CartesianGrid vertical={false} strokeDasharray="1" />
-        <XAxis dataKey="day" axisLine={false} tickLine={false}/>
+        <XAxis
+          dataKey="day"
+          axisLine={false}
+          tickLine={false}
+          style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
+        />
 
         <YAxis
+          className="sportsee-activity-axis"
           yAxisId="right"
           axisLine={false}
           orientation="right"
@@ -65,6 +106,7 @@ function DailyActivity(props) {
           tickCount={4}
           dataKey="poids"
           tickLine={false}
+          style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
         />
         <YAxis
           yAxisId="left"
@@ -77,14 +119,12 @@ function DailyActivity(props) {
           tickLine={false}
         />
 
-        <Tooltip />
-        <Legend />
+        <Tooltip content={<CustomTooltip />} />
 
         <Bar
           yAxisId="right"
           minPointSize={5}
           radius={[20, 20, 0, 0]}
-          name="Poids (kg)"
           dataKey="poids"
           fill="#282D30"
         />
@@ -92,12 +132,11 @@ function DailyActivity(props) {
           yAxisId="left"
           minPointSize={5}
           radius={[20, 20, 0, 0]}
-          name="Calories Brûlées (kCal)"
           dataKey="calories"
           fill="#E60000"
         />
       </BarChart>
-    </ResponsiveContainer>
+    </div>
   );
 }
 
