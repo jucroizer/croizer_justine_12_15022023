@@ -4,9 +4,9 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Line
+  Line,
 } from "recharts";
-import "../styles/Graph.css"
+import "../styles/Graph.css";
 
 function Sessions(props) {
   const sessions = props.sessions.sessions;
@@ -43,28 +43,54 @@ function Sessions(props) {
     },
   ];
 
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip-session">
+          <p className="time">{`${payload[0].value + "min"}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <div
       className="sportsee-session-container"
-      style={{ backgroundColor: "#FF0000" , borderRadius: "5px"}}
+      style={{ backgroundColor: "#FF0000", borderRadius: "5px" }}
     >
-      <p>Durée moyenne des sessions</p>
-        <LineChart
-          width={250}
-          height={230}
-          data={data}
-          margin={{ top: 0, right: 0, left: -40, bottom: 5 }}
-        >
-          <CartesianGrid />
-          <XAxis dataKey="day" axisLine={false} />
-          <YAxis tick={false} axisLine={false} />
-          <Tooltip />
-          <Line
-            type="monotone"
-            dataKey="session"
-            stroke="#FFFF"
-          />
-        </LineChart>
+      <p className="sportsee-session-title">Durée moyenne des sessions</p>
+      <LineChart
+        width={280}
+        height={250}
+        data={data}
+        margin={{ 
+          top: 50, 
+          right: 11, 
+          left: -50, 
+          bottom: 10, 
+          zIndex: 2 
+        }}
+        style={{color: "#FFFFF"}}
+      >
+        <CartesianGrid
+          vertical={false}
+          horizontal={false}
+          strokeDasharray="3 3"
+        />
+        <XAxis
+          dataKey="day"
+          axisLine={false}
+          axisTickLine={false}
+          tickLine={false}
+          className="sportsee-session-day"
+          style={{ color: "#FFFFFF" }}
+        />
+        <YAxis tick={false} axisLine={false} />
+        <Tooltip content={<CustomTooltip />} />
+        <Line type="monotone" dataKey="session" stroke="#FFFF" />
+      </LineChart>
     </div>
   );
 }

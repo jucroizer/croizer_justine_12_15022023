@@ -96,3 +96,26 @@
     font-weight: 700;
     color: #282D30;
 }
+
+/* Graphique Sessions */
+
+.sportsee-session-title{
+    position: relative;
+    top: 0.5em;
+    left: 2em;
+    width: 50%;
+    height: 0.5em
+}
+
+.custom-tooltip-session{
+    background-color: #FFFFFF;
+    padding: 0.1em 0.5em;
+}
+
+.time{
+    font-size: 0.7em;
+}
+
+.sportsee-session-day{
+    color: #FFFFFF;
+}
