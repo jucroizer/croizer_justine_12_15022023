@@ -18,9 +18,7 @@ Then you need to run :
 
 All you need is available on this project Node.js 
 
-===>
-
-[https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
+===> [https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 Please follow all instuctions on the ReadMe file of this project if you want to test with the API.
 
@@ -42,13 +40,13 @@ Recharts
 
 Other dependencies include:
 
-"@testing-library/jest-dom": "^5.16.5"
-"@testing-library/react": "^13.4.0"
-"@testing-library/user-event": "^13.5.0"
-"react": "^18.2.0"
-"react-dom": "^18.2.0"
-"react-router-dom": "^6.2.2"
-"react-scripts": "5.0.1"
-"recharts": "^2.4.3"
+ - "@testing-library/jest-dom": "^5.16.5"
+ - "@testing-library/react": "^13.4.0"
+ - "@testing-library/user-event": "^13.5.0"
+ - "react": "^18.2.0"
+ - "react-dom": "^18.2.0"
+ - "react-router-dom": "^6.2.2"
+ - "react-scripts": "5.0.1"
+ - "recharts": "^2.4.3"
 
 Coded in Visual Studio Code.
