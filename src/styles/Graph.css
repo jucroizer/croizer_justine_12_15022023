@@ -107,6 +107,7 @@
     height: 0.5em;
     color: #FFFFFF;
     line-height: 24px;
+    font-weight: 700;
 }
 
 .custom-tooltip-session{
@@ -116,8 +117,4 @@
 
 .time{
     font-size: 0.7em;
-}
-
-.sportsee-session-day{
-    color: #FFFFFF;
 }

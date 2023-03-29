@@ -14,29 +14,29 @@ import prot from "../assets/cardAssets/protein-icon.svg";
 import glu from "../assets/cardAssets/carbs-icon.svg";
 import lip from "../assets/cardAssets/fat-icon.svg";
 
+/** MockProfil function
+ *
+ * retrieve id from URL
+ * retrieve data from MockAPI
+ *
+ * @returns the ProfilMock page with all the data needed for the different displays
+*/
+
 function MockProfil() {
   const { id } = useParams();
   const transformId = parseInt(id);
 
-  // Récupération des données de l'utilisateur
   const userInfo = mockData.getMockUserInfo(transformId);
   const user = userInfo.userInfos;
 
-  // Utilisation des données keyData pour les affichages en carte (droite)
   const userKeyData = userInfo.keyData;
 
   const score = userInfo.todayScore;
 
-  //Récupération des données de l'activité de l'utilisateur
-  // Utilisation de BarChart pour l'affichage de l'activité quotidienne
   const userActivity = mockData.getMockUserActivity(transformId);
 
-  //Récupération des données des sessions de l'utilisateur
-  // Utilisation de LineChart pour l'affichage de la durée moyenne des sessions
   const userSession = mockData.getMockUserSession(transformId);
 
-  //Récupération des données de performances de l'utilisateur
-  // Utilisation de RadarChart pour l'affichage des specs
   const userPerformance = mockData.getMockUserPerformance(transformId);
 
   return (

@@ -5,6 +5,9 @@ import alters from "../assets/verticalLayoutAssets/alters.svg"
 
 import "../styles/VerticalLayout.css"
 
+/** Header function
+ * @returns vertical navbar
+*/
 function VerticalLayout(){
     return <article className="sportsee-vertical-layout">
         <nav className="sportsee-vertical-layout-nav">

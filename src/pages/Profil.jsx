@@ -16,10 +16,16 @@ import prot from "../assets/cardAssets/protein-icon.svg";
 import glu from "../assets/cardAssets/carbs-icon.svg";
 import lip from "../assets/cardAssets/fat-icon.svg";
 
+/** MockProfil function
+ *
+ * retrieve id from URL
+ * retrieve data from FetchAPI
+ *
+ * @returns the Profil page with all the data needed for the different displays
+*/
 function Profil() {
   const { id } = useParams();
   const transformId = parseInt(id);
-  console.log(transformId);
 
   const [dataUser, setUserData] = useState();
   const [dataActivity, setActivityData] = useState();
@@ -32,15 +38,14 @@ function Profil() {
       const user = await useFetch.getUserInfo(transformId);
       setUserData(user);
 
-      let score ;
+      let score;
 
-      if(user.todayScore === undefined){
+      if (user.todayScore === undefined) {
         score = user.score;
-        setDataScore(score)
-        console.log(score)
+        setDataScore(score);
       } else if (user.score === undefined) {
         score = user.todayScore;
-        setDataScore(score)
+        setDataScore(score);
       }
 
       const activity = await useFetch.getUserActivity(transformId);
@@ -55,64 +60,26 @@ function Profil() {
     fetchData().catch(console.error);
   }, []);
 
-
   if (
     dataUser === undefined ||
     dataActivity === undefined ||
     dataSession === undefined ||
     dataPerformance === undefined
   ) {
-    // retourner une div "pas de retour de l'API" pour signifier le fait de pas avoir de données API non démarrée/ inaccessible
     return (
       <div>
         <Header />
         <VerticalLayout />
-        <p>Oups</p>
-  
-        {/* <main className="sportsee-main">
-          <h1 className="sportsee-title">
-            Bonjour {" "}
-            <span className="sportsee-title-username">{dataUser.firstName}</span>
-          </h1>
-          <p className="sportsee-engagement-phrase">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-  
-          <section className="sportsee-stats-container">
-            <div className="sportsee-graph-container">
-              <DailyActivity activity={dataActivity} />
-              <div className="sportsee-stats-trio">
-                <Sessions sessions={dataSession} />
-                <Performances performances={dataPerformance} />
-                <Score score={dataUser.todayScore} />
-              </div>
-            </div>
-            <article className="sportsee-card-container">
-              <Card
-                count={dataUser.keyData.calorieCount + "kCal"}
-                categorie="Calories"
-                icon={cal}
-              />
-              <Card
-                count={dataUser.keyData.proteinCount + "g"}
-                categorie="Protéines"
-                icon={prot}
-              />
-              <Card
-                count={dataUser.keyData.carbohydrateCount + "g"}
-                categorie="Glucides"
-                icon={glu}
-              />
-              <Card
-                count={dataUser.keyData.lipidCount + "g"}
-                categorie="Lipides"
-                icon={lip}
-              />
-            </article>
-          </section>
-        </main> */}
+
+        <main className="sportsee-main">
+          <h1 className="sportsee-title">Oups !</h1>
+          <p className="sportsee-engagement-phrase">
+            Il semblerait que ce profil ne soit pas accessible 😣
+          </p>
+        </main>
       </div>
     );
   }
-  // Reprendre ce qu'on a fait sur le profilMOck (html etc..)
 
   return (
     <div>
@@ -121,10 +88,12 @@ function Profil() {
 
       <main className="sportsee-main">
         <h1 className="sportsee-title">
-          Bonjour {" "}
+          Bonjour{" "}
           <span className="sportsee-title-username">{dataUser.firstName}</span>
         </h1>
-        <p className="sportsee-engagement-phrase">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <p className="sportsee-engagement-phrase">
+          Félicitation ! Vous avez explosé vos objectifs hier 👏
+        </p>
 
         <section className="sportsee-stats-container">
           <div className="sportsee-graph-container">
@@ -134,7 +103,6 @@ function Profil() {
               <Performances performances={dataPerformance} />
               <Score score={dataScore} />
             </div>
-
           </div>
           <article className="sportsee-card-container">
             <Card

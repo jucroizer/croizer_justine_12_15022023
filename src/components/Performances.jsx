@@ -8,9 +8,19 @@ import {
 
 import "../styles/Graph.css";
 
+/** Performances function
+ *
+ * retrieve data from Profil or ProfilMock
+ *
+ * @param {object} performances
+ * @returns graph info about the user performances sessions with value and kind of performance
+*/
 function Performances(props) {
   const performance = props.performances;
 
+  /**
+   * data format arrangement
+   */
   const data = [
     {
       name: "Intensité",

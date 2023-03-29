@@ -18,7 +18,7 @@ class FetchAPI {
    * retrieve data from an API
    *
    * @param {number} id
-   * @returns info about the user like her/his name, age, score, macro count
+   * @returns info about the user activity like daily sessions, kilogram and calories burned
    */
   static async getUserActivity(id) {
     let _data = await fetch(`http://localhost:3000/user/${id}/activity`)
@@ -32,7 +32,7 @@ class FetchAPI {
    * retrieve data from an API
    *
    * @param {number} id
-   * @returns info about the user like her/his name, age, score, macro count
+   * @returns info about the user session like session length day by day
    */
   static async getUserSession(id) {
     let _data = await fetch(`http://localhost:3000/user/${id}/average-sessions`)
@@ -46,7 +46,7 @@ class FetchAPI {
    * retrieve data from an API
    *
    * @param {number} id
-   * @returns info about the user like her/his name, age, score, macro count
+   * @returns info about the user performances like cardio, energy, endurance, strength, speed and intensity
    */
   static async getUserPerformance(id) {
     let _data = await fetch(`http://localhost:3000/user/${id}/performance`)

@@ -4,15 +4,24 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Line,
-  Rectangle,
+  Line
 } from "recharts";
 import "../styles/Graph.css";
 
+/** Session function
+ *
+ * retrieve data from Profil or ProfilMock
+ *
+ * @param {object} sessions
+ * @returns graph info about the user daily score percentage
+ */
 function Sessions(props) {
   const sessions = props.sessions.sessions;
   const sessionMoy = sessions.map((session) => session.sessionLength);
 
+  /**
+   * data format arrangement
+   */
   const data = [
     {
       day: "L",
@@ -56,11 +65,6 @@ function Sessions(props) {
     return null;
   };
 
-  const mouseEnterHandler = (key) => {
-    console.log("mouseEnterHandler: key: " + key);
-  };
-  
-
   return (
     <div
       className="sportsee-session-container"
@@ -71,14 +75,14 @@ function Sessions(props) {
         width={280}
         height={250}
         data={data}
-        margin={{ 
-          top: 50, 
-          right: 11, 
-          left: -50, 
-          bottom: 10, 
-          zIndex: 2 
+        margin={{
+          top: 50,
+          right: 11,
+          left: -50,
+          bottom: 10,
+          zIndex: 2,
         }}
-        style={{color: "#FFFFF"}}
+        style={{ color: "#FFFFF" }}
       >
         <CartesianGrid
           vertical={false}
@@ -88,16 +92,21 @@ function Sessions(props) {
         <XAxis
           dataKey="day"
           axisLine={false}
-          axisTickLine={false}
+          tick={{color: "#FFFFFF"}}
           tickLine={false}
-          className="sportsee-session-day"
-          style={{ color: "#FFFFFF" }}
+          textDecoration={{color: "#FFFFFF"}}
         />
         <YAxis tick={false} axisLine={false} />
 
         {/*  aide custom cursor : https://github.com/recharts/recharts/issues/1816 */}
         <Tooltip cursor={false} content={<CustomTooltip />} />
-        <Line type="monotone" dot={false} dataKey="session" stroke="#FFFF" activeDot={{  r: 4, onMouseEnter: () => mouseEnterHandler("ABC") }} />
+        <Line
+          type="monotone"
+          dot={false}
+          dataKey="session"
+          stroke="#FFFF"
+          activeDot={{ r: 4 }}
+        />
       </LineChart>
     </div>
   );

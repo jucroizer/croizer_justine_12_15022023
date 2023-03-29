@@ -2,6 +2,9 @@
 import logo from "../assets/logo.svg"
 import "../styles/Header.css"
 
+/** Header function
+ * @returns navbar and logo
+*/
 function Header(){
     return <header className="sportsee-header">
         <img className="sportsee-header-logo" src={ logo } alt="logo SportSee"/>

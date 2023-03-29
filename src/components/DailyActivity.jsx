@@ -9,9 +9,19 @@ import {
 
 import "../styles/Graph.css";
 
+/** DailyActivity function
+ *
+ * retrieve data from Profil or ProfilMock
+ *
+ * @param {object} sessions
+ * @returns card info about the user activity sessions day by day, kilogram and calories burned
+*/
 function DailyActivity(props) {
   const sessions = props.activity.sessions;
 
+  /**
+   * data format arrangement
+   */
   const data = [
     {
       day: 1,

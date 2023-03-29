@@ -26,3 +26,21 @@
 .sportsee-stats-trio{
     display: flex;
 }
+
+/* Responsive */
+@media screen and (max-width: 1435px) {
+    .sportsee-stats-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sportsee-graph-container{
+        width: 95%;
+        margin-bottom: 2em;
+    }
+
+    .sportsee-card-container{
+        display: flex;
+        width: 95%;
+    }
+}
