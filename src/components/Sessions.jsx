@@ -4,7 +4,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Line
+  Line,
 } from "recharts";
 import "../styles/Graph.css";
 
@@ -71,6 +71,7 @@ function Sessions(props) {
       style={{ backgroundColor: "#FF0000", borderRadius: "5px" }}
     >
       <p className="sportsee-session-title">Durée moyenne des sessions</p>
+
       <LineChart
         width={280}
         height={250}
@@ -92,20 +93,25 @@ function Sessions(props) {
         <XAxis
           dataKey="day"
           axisLine={false}
-          tick={{color: "#FFFFFF"}}
+          stroke="rgba(255, 255, 255, 0.7)"
           tickLine={false}
-          textDecoration={{color: "#FFFFFF"}}
         />
         <YAxis tick={false} axisLine={false} />
 
-        {/*  aide custom cursor : https://github.com/recharts/recharts/issues/1816 */}
         <Tooltip cursor={false} content={<CustomTooltip />} />
+
         <Line
           type="monotone"
           dot={false}
           dataKey="session"
           stroke="#FFFF"
-          activeDot={{ r: 4 }}
+          strokeWidth={1.5}
+          activeDot={{
+            stroke: "rgba(255, 255, 255, 0.198345)",
+            strokeWidth: 7,
+            r: 4,
+            fill: "white",
+          }}
         />
       </LineChart>
     </div>

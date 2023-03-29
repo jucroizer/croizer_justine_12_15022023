@@ -67,7 +67,7 @@
     color: #20253A;
     top: 1em;
     left: 2em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 700;
 }
 
@@ -101,13 +101,15 @@
 
 .sportsee-session-title{
     position: relative;
-    top: 0.5em;
+    top: 1em;
     left: 2em;
     width: 60%;
     height: 0.5em;
     color: #FFFFFF;
     line-height: 24px;
     font-weight: 700;
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
 .custom-tooltip-session{
@@ -117,4 +119,8 @@
 
 .time{
     font-size: 0.7em;
+}
+
+.recharts-layer .recharts-cartesian-axis .recharts-xAxis .xAxis {
+    color: #FFFFFF;
 }
