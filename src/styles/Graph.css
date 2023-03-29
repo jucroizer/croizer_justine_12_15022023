@@ -103,8 +103,10 @@
     position: relative;
     top: 0.5em;
     left: 2em;
-    width: 50%;
-    height: 0.5em
+    width: 60%;
+    height: 0.5em;
+    color: #FFFFFF;
+    line-height: 24px;
 }
 
 .custom-tooltip-session{

@@ -55,7 +55,7 @@ function Performances(props) {
         width={300}
         height={300}
         data={data}
-        style={{ marginLeft: "-1.2em", marginBottom: "-1em" }}
+        style={{ marginLeft: "-0.7em", marginBottom: "-1em" }}
       >
         <PolarGrid gridType="polygon" radialLines={false} />
         <PolarAngleAxis

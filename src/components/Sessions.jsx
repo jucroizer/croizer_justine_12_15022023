@@ -5,6 +5,7 @@ import {
   YAxis,
   Tooltip,
   Line,
+  Rectangle,
 } from "recharts";
 import "../styles/Graph.css";
 
@@ -55,6 +56,11 @@ function Sessions(props) {
     return null;
   };
 
+  const mouseEnterHandler = (key) => {
+    console.log("mouseEnterHandler: key: " + key);
+  };
+  
+
   return (
     <div
       className="sportsee-session-container"
@@ -88,8 +94,10 @@ function Sessions(props) {
           style={{ color: "#FFFFFF" }}
         />
         <YAxis tick={false} axisLine={false} />
-        <Tooltip content={<CustomTooltip />} />
-        <Line type="monotone" dataKey="session" stroke="#FFFF" />
+
+        {/*  aide custom cursor : https://github.com/recharts/recharts/issues/1816 */}
+        <Tooltip cursor={false} content={<CustomTooltip />} />
+        <Line type="monotone" dot={false} dataKey="session" stroke="#FFFF" activeDot={{  r: 4, onMouseEnter: () => mouseEnterHandler("ABC") }} />
       </LineChart>
     </div>
   );
