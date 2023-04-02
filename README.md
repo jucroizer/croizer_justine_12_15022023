@@ -53,7 +53,7 @@ Other dependencies include:
 
  To display the Profile page : `http://localhost:3001/Profil/12` or `http://localhost:3001/Profil/18`
 
- To display the Mock Profile page : `http://localhost:3001/ProfilMock/12`or `http://localhost:3001/Profil/18`
+ To display the Mock Profile page : `http://localhost:3001/ProfilMock/12`or `http://localhost:3001/ProfilMock/18`
 
 
 Coded in Visual Studio Code.
