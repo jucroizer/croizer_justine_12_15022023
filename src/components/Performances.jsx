@@ -90,8 +90,13 @@ function Performances(props) {
   );
 }
 
+
 Performances.propTypes = {
-  props: PropTypes.array
+  /**
+   * user performances sessions
+   */
+  props: PropTypes.array,
 }
+
 
 export default Performances;

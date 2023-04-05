@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   LineChart,
   CartesianGrid,
@@ -117,6 +118,13 @@ function Sessions(props) {
       </LineChart>
     </div>
   );
+}
+
+Sessions.propTypes = {
+  /**
+   * user performances sessions
+   */
+  props: PropTypes.array,
 }
 
 export default Sessions;

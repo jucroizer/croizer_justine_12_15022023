@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   BarChart,
   CartesianGrid,
@@ -13,7 +14,7 @@ import "../styles/Graph.css";
  *
  * retrieve data from Profil or ProfilMock
  *
- * @param {object} sessions
+ * @param {object} daily activity
  * @returns card info about the user activity sessions day by day, kilogram and calories burned
 */
 function DailyActivity(props) {
@@ -147,6 +148,13 @@ function DailyActivity(props) {
       </BarChart>
     </div>
   );
+}
+
+DailyActivity.propTypes = {
+  /**
+   * user daily activity meta
+   */
+  props: PropTypes.array,
 }
 
 export default DailyActivity;

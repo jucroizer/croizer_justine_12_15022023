@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { RadialBarChart, RadialBar } from "recharts";
 import "../styles/Score.css";
 
@@ -70,6 +71,13 @@ function Score(props) {
       </RadialBarChart>
     </div>
   );
+}
+
+Score.propTypes = {
+  /**
+   * user score
+   */
+  props: PropTypes.number,
 }
 
 export default Score;
