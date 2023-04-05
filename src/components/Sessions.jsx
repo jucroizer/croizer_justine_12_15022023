@@ -73,8 +73,8 @@ function Sessions(props) {
       <p className="sportsee-session-title">Durée moyenne des sessions</p>
 
       <LineChart
-        width={280}
-        height={250}
+        width={180}
+        height={180}
         data={data}
         margin={{
           top: 50,
@@ -95,6 +95,7 @@ function Sessions(props) {
           axisLine={false}
           stroke="rgba(255, 255, 255, 0.7)"
           tickLine={false}
+          style={{ fontSize: "0.7em" }}
         />
         <YAxis tick={false} axisLine={false} />
 
@@ -105,7 +106,7 @@ function Sessions(props) {
           dot={false}
           dataKey="session"
           stroke="#FFFF"
-          strokeWidth={1.5}
+          strokeWidth={1.2}
           activeDot={{
             stroke: "rgba(255, 255, 255, 0.198345)",
             strokeWidth: 7,

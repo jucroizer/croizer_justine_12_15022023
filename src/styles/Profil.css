@@ -1,5 +1,5 @@
 .sportsee-main {
-    margin: 4em 0 0 12em;
+    margin: 4em 0 0 9em;
 }
 
 .sportsee-title{
@@ -20,7 +20,7 @@
 }
 
 .sportsee-graph-container{
-    width: 70%;
+    width: 65%;
 }
 
 .sportsee-stats-trio{
@@ -28,7 +28,7 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 1435px) {
+/* @media screen and (max-width: 1435px) {
     .sportsee-stats-container{
         display: flex;
         flex-direction: column;
@@ -43,4 +43,4 @@
         display: flex;
         width: 95%;
     }
-}
+} */

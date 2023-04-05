@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   RadarChart,
   PolarGrid,
@@ -57,20 +58,20 @@ function Performances(props) {
   return (
     <div
       className="sportsee-perf-container"
-      style={{ backgroundColor: "#282D30", borderRadius: "5px" }}
+      style={{ backgroundColor: "#282D30", borderRadius: "5px"}}
     >
       <RadarChart
         className="sportsee-perf-radar"
-        outerRadius={80}
-        width={300}
-        height={300}
+        outerRadius={60}
+        width={180}
+        height={209}
         data={data}
-        style={{ marginLeft: "-0.7em", marginBottom: "-1em" }}
+        // style={{ marginLeft: "0.1em" }}
       >
         <PolarGrid gridType="polygon" radialLines={false} />
         <PolarAngleAxis
           dataKey="name"
-          style={{ color: "#FFFFFF", fontSize: "0.8em" }}
+          style={{ color: "#FFFFFF", fontSize: "0.5em" }}
         />
         <PolarRadiusAxis
           domain={[0, "fullMark"]}
@@ -87,6 +88,10 @@ function Performances(props) {
       </RadarChart>
     </div>
   );
+}
+
+Performances.propTypes = {
+  props: PropTypes.array
 }
 
 export default Performances;

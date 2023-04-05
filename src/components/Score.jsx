@@ -5,7 +5,7 @@ import "../styles/Score.css";
  *
  * retrieve data from Profil or ProfilMock
  *
- * @param {object} sessions
+ * @param {object} score
  * @returns graph info about the user daily score percentage
 */
 function Score(props) {
@@ -43,20 +43,21 @@ function Score(props) {
       <RadialBarChart
         startAngle={220}
         endAngle={-35}
-        width={300}
-        height={200}
-        cx="44%"
-        cy="38%"
+        width={170}
+        height={170}
+        // cx="44%"
+        // cy="38%"
         outerRadius={140}
         barSize={10}
         data={data}
         isAnimationActive={false}
         style={{
-          marginTop: "-6em",
-          marginLeft: "0em",
-          width: "100%",
-          height: "100%",
+          marginTop: "-8.5em",
+          marginLeft: "0.4em"
         }}
+
+        // width: "50%",
+          // height: "50%",
       >
         <RadialBar
           minAngle={5}

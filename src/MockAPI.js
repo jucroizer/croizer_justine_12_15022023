@@ -1,7 +1,5 @@
-import {USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE} from "../src/data/data"
-
+import {USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE} from "../src/data/data";
 class mockData {
-
     /** getMockUserInfo function
      *
      * retrieve data from a json
@@ -62,8 +60,7 @@ class mockData {
 
         return userPerformanceTab
     }
-
-    
 }
 
 export default mockData
+

@@ -1,5 +1,6 @@
 .sportsee-perf-container, .sportsee-session-container, .sportsee-score-container{
     width: 32%;
+    height: 32%;
     margin: 0 auto;
 }
 
@@ -67,14 +68,14 @@
     color: #20253A;
     top: 1em;
     left: 2em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 700;
 }
 
 .sportsee-score-infos{
     position:relative;
-    top: 3em;
-    left: 4em;
+    top: 1em;
+    left: 1.3em;
     background-color: #FFFFFF;
     border-radius: 100px;
     width: 105px;
@@ -106,9 +107,9 @@
     width: 60%;
     height: 0.5em;
     color: #FFFFFF;
-    line-height: 24px;
+    line-height: 15px;
     font-weight: 700;
-    font-size: 0.9em;
+    font-size: 0.7em;
     opacity: 0.8;
 }
 

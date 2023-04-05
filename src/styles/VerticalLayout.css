@@ -3,12 +3,12 @@
     top: 0em;
     background-color: #020203;
     width: 6em;
-    height: 100vh;
+    height: 780px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .sportsee-vertical-layout-nav{
-    margin: 17em auto 6em auto;
+    margin: 12em auto 6em auto;
     text-align: center;
 }
 

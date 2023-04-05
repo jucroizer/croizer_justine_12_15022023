@@ -92,8 +92,8 @@ function DailyActivity(props) {
       </div>
 
       <BarChart
-        width={900}
-        height={170}
+        width={570}
+        height={135}
         data={data}
         barSize={7}
         style={{ marginLeft: "-1.5em" }}

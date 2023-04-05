@@ -32,11 +32,15 @@ function Profil() {
   const [dataSession, setSessionData] = useState();
   const [dataPerformance, setPerformanceData] = useState();
   const [dataScore, setDataScore] = useState();
+  const [dataName, setDataName] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       const user = await useFetch.getUserInfo(transformId);
       setUserData(user);
+
+      const name = user.userInfos;
+      setDataName(name)
 
       let score;
 
@@ -89,7 +93,7 @@ function Profil() {
       <main className="sportsee-main">
         <h1 className="sportsee-title">
           Bonjour{" "}
-          <span className="sportsee-title-username">{dataUser.firstName}</span>
+          <span className="sportsee-title-username">{dataName.firstName}</span>
         </h1>
         <p className="sportsee-engagement-phrase">
           Félicitation ! Vous avez explosé vos objectifs hier 👏
