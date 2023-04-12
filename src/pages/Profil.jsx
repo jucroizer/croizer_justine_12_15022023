@@ -25,6 +25,7 @@ import lip from "../assets/cardAssets/fat-icon.svg";
 */
 function Profil() {
   const { id } = useParams();
+  console.log(id);
   const transformId = parseInt(id);
 
   const [dataUser, setUserData] = useState();
