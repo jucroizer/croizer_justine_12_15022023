@@ -5,6 +5,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
+  ResponsiveContainer,
 } from "recharts";
 
 import "../styles/Graph.css";
@@ -56,15 +57,17 @@ function Performances(props) {
   ];
 
   return (
+    
     <div
       className="sportsee-perf-container"
-      style={{ backgroundColor: "#282D30", borderRadius: "5px"}}
+      style={{ backgroundColor: "#282D30", borderRadius: "5px", height:"100%"}}
     >
+      <ResponsiveContainer width="100%" height={209}>
       <RadarChart
         className="sportsee-perf-radar"
         outerRadius={60}
-        width={180}
-        height={209}
+        // width={180}
+        // height={209}
         data={data}
         // style={{ marginLeft: "0.1em" }}
       >
@@ -86,7 +89,9 @@ function Performances(props) {
           fillOpacity={0.8}
         />
       </RadarChart>
+      </ResponsiveContainer>
     </div>
+    
   );
 }
 

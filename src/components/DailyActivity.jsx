@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
   BarChart,
   CartesianGrid,
   XAxis,
   YAxis,
   Bar,
-  Tooltip
+  Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 import "../styles/Graph.css";
@@ -16,7 +17,7 @@ import "../styles/Graph.css";
  *
  * @param {object} daily activity
  * @returns card info about the user activity sessions day by day, kilogram and calories burned
-*/
+ */
 function DailyActivity(props) {
   const sessions = props.activity.sessions;
 
@@ -73,7 +74,7 @@ function DailyActivity(props) {
 
     return null;
   };
-
+  
   return (
     <div
       className="sportsee-activity-container"
@@ -86,66 +87,69 @@ function DailyActivity(props) {
       <div className="sportsee-activity-meta">
         <p className="sportsee-activity-title">Activité quotidienne</p>
 
-        <div  className="sportsee-activity-legend">
-            <li className="sportsee-list-poids"><span>Poids (kg)</span></li>
-            <li className="sportsee-list-calories"><span>Calories brûlées (kCal)</span></li>
+        <div className="sportsee-activity-legend">
+          <li className="sportsee-list-poids">
+            <span>Poids (kg)</span>
+          </li>
+          <li className="sportsee-list-calories">
+            <span>Calories brûlées (kCal)</span>
+          </li>
         </div>
       </div>
+      <ResponsiveContainer width="100%" height={135}>
+        <BarChart
+          data={data}
+          barSize={7}
+          style={{ marginLeft: "-1.5em" }}
+        >
+          <CartesianGrid vertical={false} strokeDasharray="1" />
+          <XAxis
+            dataKey="day"
+            axisLine={false}
+            tickLine={false}
+            style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
+          />
 
-      <BarChart
-        width={570}
-        height={135}
-        data={data}
-        barSize={7}
-        style={{ marginLeft: "-1.5em" }}
-      >
-        <CartesianGrid vertical={false} strokeDasharray="1" />
-        <XAxis
-          dataKey="day"
-          axisLine={false}
-          tickLine={false}
-          style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
-        />
+          <YAxis
+            className="sportsee-activity-axis"
+            yAxisId="right"
+            axisLine={false}
+            orientation="right"
+            domain={["dataMin - 10", "dataMax + 4"]}
+            tickCount={4}
+            dataKey="poids"
+            tickLine={false}
+            style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
+          />
+          <YAxis
+            yAxisId="left"
+            tick={false}
+            axisLine={false}
+            orientation="left"
+            domain={["dataMin - 50", "dataMax + 20"]}
+            tickCount={4}
+            dataKey="calories"
+            tickLine={false}
+          />
 
-        <YAxis
-          className="sportsee-activity-axis"
-          yAxisId="right"
-          axisLine={false}
-          orientation="right"
-          domain={["dataMin - 10", "dataMax + 4"]}
-          tickCount={4}
-          dataKey="poids"
-          tickLine={false}
-          style={{ color: "#9B9EAC", fontSize: "0.9rem" }}
-        />
-        <YAxis
-          yAxisId="left"
-          tick={false}
-          axisLine={false}
-          orientation="left"
-          domain={["dataMin - 50", "dataMax + 20"]}
-          tickCount={4}
-          dataKey="calories"
-          tickLine={false}
-        />
+          <Tooltip content={<CustomTooltip />} />
 
-        <Tooltip content={<CustomTooltip />} />
-
-        <Bar
-          yAxisId="right"
-          minPointSize={5}
-          radius={[20, 20, 0, 0]}
-          dataKey="poids"
-          fill="#282D30"
-        />
-        <Bar
-          yAxisId="left"
-          minPointSize={5}
-          radius={[20, 20, 0, 0]}
-          dataKey="calories"
-          fill="#E60000"
-        />
-      </BarChart>
+          <Bar
+            yAxisId="right"
+            minPointSize={5}
+            radius={[20, 20, 0, 0]}
+            dataKey="poids"
+            fill="#282D30"
+          />
+          <Bar
+            yAxisId="left"
+            minPointSize={5}
+            radius={[20, 20, 0, 0]}
+            dataKey="calories"
+            fill="#E60000"
+          />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }
@@ -155,6 +159,6 @@ DailyActivity.propTypes = {
    * user daily activity meta
    */
   props: PropTypes.array,
-}
+};
 
 export default DailyActivity;

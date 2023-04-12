@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { RadialBarChart, RadialBar } from "recharts";
-import "../styles/Score.css";
+import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
+// import "../styles/Score.css";
 
 /** Score function
  *
@@ -8,9 +8,8 @@ import "../styles/Score.css";
  *
  * @param {object} score
  * @returns graph info about the user daily score percentage
-*/
+ */
 function Score(props) {
-  
   let getScore = props.score;
   let score = 0;
 
@@ -30,46 +29,48 @@ function Score(props) {
   ];
 
   return (
-    <div
-      className="sportsee-score-container"
-      style={{ backgroundColor: "#FBFBFB", borderRadius: "5px" }}
-    >
-      <p className="sportsee-score-title">Score</p>
-      <div className="sportsee-score-infos">
-        <p className="sportsee-score-p">
-          <span id="scoreGras">{score}%</span> de votre objectif
-        </p>
-      </div>
-
-      <RadialBarChart
-        startAngle={220}
-        endAngle={-35}
-        width={170}
-        height={170}
-        // cx="44%"
-        // cy="38%"
-        outerRadius={140}
-        barSize={10}
-        data={data}
-        isAnimationActive={false}
-        style={{
-          marginTop: "-8.5em",
-          marginLeft: "0.4em"
-        }}
-
-        // width: "50%",
-          // height: "50%",
+    
+      <div
+        className="sportsee-score-container"
+        style={{ backgroundColor: "#FBFBFB", borderRadius: "5px", height:"100%"}}
       >
-        <RadialBar
-          minAngle={5}
-          background
-          clockWise
-          dataKey="todayScore"
-          cornerRadius={15}
-          style={{ backgroundColor: "#FFFFFF" }}
-        />
-      </RadialBarChart>
-    </div>
+        <p className="sportsee-score-title">Score</p>
+        <div className="sportsee-score-infos">
+          <p className="sportsee-score-p">
+            <span id="scoreGras">{score}%</span> de votre objectif
+          </p>
+        </div>
+        <ResponsiveContainer width="100%" height={185}>
+        <RadialBarChart
+          startAngle={220}
+          endAngle={-35}
+          // width={170}
+          // height={170}
+          // cx="44%"
+          // cy="38%"
+          outerRadius={140}
+          barSize={10}
+          data={data}
+          isAnimationActive={false}
+          style={{
+            marginTop: "-9.5em",
+          }}
+
+          // width: "50%",
+          // height: "50%",
+        >
+          <RadialBar
+            minAngle={5}
+            background
+            clockWise
+            dataKey="todayScore"
+            cornerRadius={15}
+            style={{ backgroundColor: "#FFFFFF" }}
+          />
+        </RadialBarChart>
+        </ResponsiveContainer>
+      </div>
+   
   );
 }
 
@@ -78,6 +79,6 @@ Score.propTypes = {
    * user score
    */
   props: PropTypes.number,
-}
+};
 
 export default Score;

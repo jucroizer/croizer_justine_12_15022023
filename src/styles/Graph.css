@@ -73,9 +73,10 @@
 }
 
 .sportsee-score-infos{
-    position:relative;
+    /* position:relative; */
     top: 1em;
-    left: 1.3em;
+    /* left: 1.3em; */
+    margin: 0 auto;
     background-color: #FFFFFF;
     border-radius: 100px;
     width: 105px;

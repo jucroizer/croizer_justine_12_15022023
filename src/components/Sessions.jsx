@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
   LineChart,
   CartesianGrid,
@@ -6,6 +6,7 @@ import {
   YAxis,
   Tooltip,
   Line,
+  ResponsiveContainer,
 } from "recharts";
 import "../styles/Graph.css";
 
@@ -67,56 +68,59 @@ function Sessions(props) {
   };
 
   return (
-    <div
-      className="sportsee-session-container"
-      style={{ backgroundColor: "#FF0000", borderRadius: "5px" }}
-    >
-      <p className="sportsee-session-title">Durée moyenne des sessions</p>
-
-      <LineChart
-        width={180}
-        height={180}
-        data={data}
-        margin={{
-          top: 50,
-          right: 11,
-          left: -50,
-          bottom: 10,
-          zIndex: 2,
-        }}
-        style={{ color: "#FFFFF" }}
+    
+      <div
+        className="sportsee-session-container"
+        style={{ backgroundColor: "#FF0000", borderRadius: "5px", height:"100%" }}
       >
-        <CartesianGrid
-          vertical={false}
-          horizontal={false}
-          strokeDasharray="3 3"
-        />
-        <XAxis
-          dataKey="day"
-          axisLine={false}
-          stroke="rgba(255, 255, 255, 0.7)"
-          tickLine={false}
-          style={{ fontSize: "0.7em" }}
-        />
-        <YAxis tick={false} axisLine={false} />
-
-        <Tooltip cursor={false} content={<CustomTooltip />} />
-
-        <Line
-          type="monotone"
-          dot={false}
-          dataKey="session"
-          stroke="#FFFF"
-          strokeWidth={1.2}
-          activeDot={{
-            stroke: "rgba(255, 255, 255, 0.198345)",
-            strokeWidth: 7,
-            r: 4,
-            fill: "white",
+        <p className="sportsee-session-title">Durée moyenne des sessions</p>
+        <ResponsiveContainer width="100%" height={181}>
+        <LineChart
+          width={180}
+          height={180}
+          data={data}
+          margin={{
+            top: 50,
+            right: 11,
+            left: -50,
+            bottom: 10,
+            zIndex: 2,
           }}
-        />
-      </LineChart>
-    </div>
+          style={{ color: "#FFFFF" }}
+        >
+          <CartesianGrid
+            vertical={false}
+            horizontal={false}
+            strokeDasharray="3 3"
+          />
+          <XAxis
+            dataKey="day"
+            axisLine={false}
+            stroke="rgba(255, 255, 255, 0.7)"
+            tickLine={false}
+            style={{ fontSize: "0.7em" }}
+          />
+          <YAxis tick={false} axisLine={false} />
+
+          <Tooltip cursor={false} content={<CustomTooltip />} />
+
+          <Line
+            type="monotone"
+            dot={false}
+            dataKey="session"
+            stroke="#FFFF"
+            strokeWidth={1.2}
+            activeDot={{
+              stroke: "rgba(255, 255, 255, 0.198345)",
+              strokeWidth: 7,
+              r: 4,
+              fill: "white",
+            }}
+          />
+        </LineChart>
+        </ResponsiveContainer>
+      </div>
+    
   );
 }
 
@@ -125,6 +129,6 @@ Sessions.propTypes = {
    * user performances sessions
    */
   props: PropTypes.array,
-}
+};
 
 export default Sessions;
