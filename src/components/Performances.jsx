@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
   RadarChart,
   PolarGrid,
@@ -16,7 +16,7 @@ import "../styles/Graph.css";
  *
  * @param {object} performances
  * @returns graph info about the user performances sessions with value and kind of performance
-*/
+ */
 function Performances(props) {
   const performance = props.performances;
 
@@ -57,51 +57,48 @@ function Performances(props) {
   ];
 
   return (
-    
     <div
       className="sportsee-perf-container"
-      style={{ backgroundColor: "#282D30", borderRadius: "5px", height:"100%"}}
+      style={{
+        backgroundColor: "#282D30",
+        borderRadius: "5px",
+        height: "230px",
+      }}
     >
-      <ResponsiveContainer width="100%" height={209}>
-      <RadarChart
-        className="sportsee-perf-radar"
-        outerRadius={60}
-        // width={180}
-        // height={209}
-        data={data}
-        // style={{ marginLeft: "0.1em" }}
-      >
-        <PolarGrid gridType="polygon" radialLines={false} />
-        <PolarAngleAxis
-          dataKey="name"
-          style={{ color: "#FFFFFF", fontSize: "0.5em" }}
-        />
-        <PolarRadiusAxis
-          domain={[0, "fullMark"]}
-          tick={false}
-          axisLine={false}
-          stroke="#FFFFFF"
-        />
-        <Radar
-          name="false"
-          dataKey="value"
-          fill="rgba(255, 1, 1, 0.7)"
-          fillOpacity={0.8}
-        />
-      </RadarChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart
+          className="sportsee-perf-radar"
+          outerRadius="70%"
+          data={data}
+        >
+          <PolarGrid gridType="polygon" radialLines={false} />
+          <PolarAngleAxis
+            dataKey="name"
+            style={{ color: "#FFFFFF", fontSize: "0.6em" }}
+          />
+          <PolarRadiusAxis
+            domain={[0, "fullMark"]}
+            tick={false}
+            axisLine={false}
+            stroke="#FFFFFF"
+          />
+          <Radar
+            name="false"
+            dataKey="value"
+            fill="rgba(255, 1, 1, 0.7)"
+            fillOpacity={0.8}
+          />
+        </RadarChart>
       </ResponsiveContainer>
     </div>
-    
   );
 }
-
 
 Performances.propTypes = {
   /**
    * user performances sessions
    */
   props: PropTypes.array,
-}
-
+};
 
 export default Performances;

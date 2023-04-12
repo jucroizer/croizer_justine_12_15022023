@@ -68,22 +68,26 @@ function Sessions(props) {
   };
 
   return (
-    
-      <div
-        className="sportsee-session-container"
-        style={{ backgroundColor: "#FF0000", borderRadius: "5px", height:"100%" }}
-      >
-        <p className="sportsee-session-title">Durée moyenne des sessions</p>
-        <ResponsiveContainer width="100%" height={181}>
+    <div
+      className="sportsee-session-container"
+      style={{
+        backgroundColor: "#FF0000",
+        borderRadius: "5px",
+        height: "230px",
+        marginBottom: "2em",
+      }}
+    >
+      <p className="sportsee-session-title">Durée moyenne des sessions</p>
+      <ResponsiveContainer width="100%" height="90%">
         <LineChart
-          width={180}
-          height={180}
+          // width={180}
+          // height={180}
           data={data}
           margin={{
             top: 50,
             right: 11,
             left: -50,
-            bottom: 10,
+            bottom: 20,
             zIndex: 2,
           }}
           style={{ color: "#FFFFF" }}
@@ -98,7 +102,7 @@ function Sessions(props) {
             axisLine={false}
             stroke="rgba(255, 255, 255, 0.7)"
             tickLine={false}
-            style={{ fontSize: "0.7em" }}
+            style={{ fontSize: "1em" }}
           />
           <YAxis tick={false} axisLine={false} />
 
@@ -118,9 +122,8 @@ function Sessions(props) {
             }}
           />
         </LineChart>
-        </ResponsiveContainer>
-      </div>
-    
+      </ResponsiveContainer>
+    </div>
   );
 }
 

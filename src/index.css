@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  min-width: 1024px;
+  max-width: 1440px;
   min-height: 780px;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;

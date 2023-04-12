@@ -1,128 +1,129 @@
-.sportsee-perf-container, .sportsee-session-container, .sportsee-score-container{
-    width: 32%;
-    height: 32%;
-    margin: 0 auto;
+.sportsee-perf-container,
+.sportsee-session-container,
+.sportsee-score-container {
+  width: 32%;
+  height: 32%;
+  margin: 0 auto;
 }
 
- /* Graphique Activité Quotidienne */
+/* Graphique Activité Quotidienne */
 
-.sportsee-activity-container{
-    padding: 1em;
+.sportsee-activity-container {
+  padding: 1em;
 }
 
-.sportsee-activity-meta{
-    display: flex;
-    justify-content: space-between;
+.sportsee-activity-meta {
+  display: flex;
+  justify-content: space-between;
 }
 
-.sportsee-activity-legend{
-    display: flex;
-    color: #74798C;
-    font-size: 0.8em;
-    margin: 1em;
+.sportsee-activity-legend {
+  display: flex;
+  color: #74798c;
+  font-size: 0.8em;
+  margin: 1em;
 }
 
-.sportsee-list-poids{
-    color: #282D30;
-    margin-right: 2em;
+.sportsee-list-poids {
+  color: #282d30;
+  margin-right: 2em;
 }
 
-.sportsee-list-poids span{
-    color: #74798C;
+.sportsee-list-poids span {
+  color: #74798c;
 }
 
-.sportsee-list-calories{
-    color:  #E60000;
+.sportsee-list-calories {
+  color: #e60000;
 }
 
-.sportsee-list-calories span{
-    color: #74798C;
+.sportsee-list-calories span {
+  color: #74798c;
 }
 
-.sportsee-activity-title{
-    font-size: 0.9em;
-    font-weight: 700;
-    margin-left: 3em;
+.sportsee-activity-title {
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-left: 3em;
 }
 
-.sportsee-engagement-phrase{
-    margin: -1em 0 2em 0;
+.sportsee-engagement-phrase {
+  margin: -1em 0 2em 0;
 }
 
-.sportsee-activity-axis{
-    font-size: 3em;
+.sportsee-activity-axis {
+  font-size: 3em;
 }
 
-.custom-tooltip-activity{
-    background-color: #E60000;
-    color: #FFFFFF;
-    padding: 0.5em;
-    font-size: 0.7em;
+.custom-tooltip-activity {
+  background-color: #e60000;
+  color: #ffffff;
+  padding: 0.5em;
+  font-size: 0.7em;
 }
-
 
 /* Graphique Score */
 
-.sportsee-score-title{
-    position: relative;
-    color: #20253A;
-    top: 1em;
-    left: 2em;
-    font-size: 0.8em;
-    font-weight: 700;
+.sportsee-score-title {
+  position: relative;
+  color: #20253a;
+  top: 1em;
+  left: 2em;
+  font-size: 0.8em;
+  font-weight: 700;
 }
 
-.sportsee-score-infos{
-    /* position:relative; */
-    top: 1em;
-    /* left: 1.3em; */
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    border-radius: 100px;
-    width: 105px;
-    height: 105px;
-    padding: 1em;
+.sportsee-score-infos {
+  /* position:relative; */
+  /* top: 2em; */
+  /* left: 1.3em; */
+  margin: 1em auto;
+  background-color: #ffffff;
+  border-radius: 100px;
+  width: 105px;
+  height: 105px;
+  padding: 1em;
 }
 
-.sportsee-score-p{
-    width: 45%;
-    font-size: 0.7em;
-    font-weight: 700;
-    text-align: center;
-    margin: 2em auto;
-    color: #74798C;
+.sportsee-score-p {
+  width: 45%;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-align: center;
+  margin: 2em auto;
+  color: #74798c;
 }
 
-#scoreGras{
-    font-size: 2em;
-    font-weight: 700;
-    color: #282D30;
+#scoreGras {
+  font-size: 2em;
+  font-weight: 700;
+  color: #282d30;
 }
 
 /* Graphique Sessions */
 
-.sportsee-session-title{
-    position: relative;
-    top: 1em;
-    left: 2em;
-    width: 60%;
-    height: 0.5em;
-    color: #FFFFFF;
-    line-height: 15px;
-    font-weight: 700;
-    font-size: 0.7em;
-    opacity: 0.8;
+.sportsee-session-title {
+  position: relative;
+  top: 1em;
+  left: 2em;
+  width: 60%;
+  height: 0.5em;
+  color: #ffffff;
+  line-height: 15px;
+  font-weight: 700;
+  font-size: 0.7em;
+  opacity: 0.8;
 }
 
-.custom-tooltip-session{
-    background-color: #FFFFFF;
-    padding: 0.1em 0.5em;
+.custom-tooltip-session {
+  background-color: #ffffff;
+  padding: 0.1em 0.5em;
 }
 
-.time{
-    font-size: 0.7em;
+.time {
+  font-size: 0.7em;
 }
 
 .recharts-layer .recharts-cartesian-axis .recharts-xAxis .xAxis {
-    color: #FFFFFF;
+  color: #ffffff;
 }

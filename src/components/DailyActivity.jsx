@@ -74,7 +74,7 @@ function DailyActivity(props) {
 
     return null;
   };
-  
+
   return (
     <div
       className="sportsee-activity-container"
@@ -82,6 +82,7 @@ function DailyActivity(props) {
         backgroundColor: "#FBFBFB",
         borderRadius: "5px",
         marginBottom: "2em",
+        height: "230px",
       }}
     >
       <div className="sportsee-activity-meta">
@@ -96,13 +97,9 @@ function DailyActivity(props) {
           </li>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={135}>
-        <BarChart
-          data={data}
-          barSize={7}
-          style={{ marginLeft: "-1.5em" }}
-        >
-          <CartesianGrid vertical={false} strokeDasharray="1" />
+      <ResponsiveContainer width="100%" height="90%">
+        <BarChart data={data} barSize={7} style={{ marginLeft: "-1.5em"}}>
+          <CartesianGrid vertical={false} strokeDasharray="1"/>
           <XAxis
             dataKey="day"
             axisLine={false}
