@@ -34,7 +34,7 @@ function Score(props) {
       style={{
         backgroundColor: "#FBFBFB",
         borderRadius: "5px",
-        height: "230px",
+        height: "250px",
       }}
     >
       <p className="sportsee-score-title">Score</p>

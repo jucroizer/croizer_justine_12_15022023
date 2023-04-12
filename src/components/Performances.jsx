@@ -62,7 +62,7 @@ function Performances(props) {
       style={{
         backgroundColor: "#282D30",
         borderRadius: "5px",
-        height: "230px",
+        height: "250px",
       }}
     >
       <ResponsiveContainer width="100%" height="100%">

@@ -73,7 +73,7 @@ function Sessions(props) {
       style={{
         backgroundColor: "#FF0000",
         borderRadius: "5px",
-        height: "230px",
+        height: "250px",
         marginBottom: "2em",
       }}
     >
