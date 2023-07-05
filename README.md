@@ -1,5 +1,9 @@
 # Sportsee project
 
+This project is the 11th project of the OpenClassrooms Front-End path. This project is a dashboard for a sport application. The goal is to create a dashboard with React and Recharts.
+
+![Sportsee](SportSee.png)
+
 ## Getting Started
 
 After cloning this repo, you need to run :
