@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/croizer_justine_12_15022023/static/css/main.a9d2b889.css",
+    "main.js": "/croizer_justine_12_15022023/static/js/main.b09a3662.js",
+    "static/media/logo.svg": "/croizer_justine_12_15022023/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swim.svg": "/croizer_justine_12_15022023/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
+    "static/media/bike.svg": "/croizer_justine_12_15022023/static/media/bike.d516c0e89dbb3aaab23afac6a130ca06.svg",
+    "static/media/carbs-icon.svg": "/croizer_justine_12_15022023/static/media/carbs-icon.aa0e74661df8c71ea59cbe777ac24615.svg",
+    "static/media/fat-icon.svg": "/croizer_justine_12_15022023/static/media/fat-icon.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
+    "static/media/protein-icon.svg": "/croizer_justine_12_15022023/static/media/protein-icon.c285979616f56dc9dfa457e51c583d68.svg",
+    "static/media/zen.svg": "/croizer_justine_12_15022023/static/media/zen.6c31a2775a609d06fd5d99eb347250ed.svg",
+    "index.html": "/croizer_justine_12_15022023/index.html",
+    "static/media/calories-icon.svg": "/croizer_justine_12_15022023/static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
+    "static/media/alters.svg": "/croizer_justine_12_15022023/static/media/alters.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
+    "main.a9d2b889.css.map": "/croizer_justine_12_15022023/static/css/main.a9d2b889.css.map",
+    "main.b09a3662.js.map": "/croizer_justine_12_15022023/static/js/main.b09a3662.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9d2b889.css",
+    "static/js/main.b09a3662.js"
+  ]
+}
